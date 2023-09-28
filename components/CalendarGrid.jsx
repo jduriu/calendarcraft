@@ -1,4 +1,4 @@
-export default function Calendar() {
+export default function CalendarGrid() {
     return (
         <div>
             Calendar
