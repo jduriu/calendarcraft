@@ -42,9 +42,14 @@ export default function Joke() {
     return (
         <div className="border border-green-400 w-fit flex justify-center items-center rounded-full ">
         {loading ?
-            <div className="p-6 text-center text-">Happy April Fools Day! Here is a joke...</div>
+            <div className="p-6 text-center text-">Happy April Fools Day!</div>
             :
-            <div className="p-6 text-center">{joke}</div>
+            <div className="p-6 text-center flex flex-col">
+                <div>
+                    Here is a dad joke!
+                </div>
+                {joke}
+            </div>
         }
         </div>
     )
