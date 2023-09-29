@@ -46,9 +46,9 @@ A modern, minimalist calendar app. No frills, just dates.
     git clone https://github.com/jduriu/calendarcraft
     ```
 2. Navigate to the root folder of the cloned application
-  ```sh
-  cd calendarcraft
-  ```
+    ```sh
+    cd calendarcraft
+    ```
 3. Install NPM packages
     ```sh
     npm install
