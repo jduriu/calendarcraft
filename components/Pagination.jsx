@@ -21,7 +21,7 @@ export default function Pagination({setDate, calendarInfo}) {
     return (
         <div className="w-full flex justify-between">
             <button
-            className="hover:text-blue-500 flex items-center"
+            className="transition ease-in-out duration-500 flex items-center hover:text-blue-500 hover:-translate-x-2 "
             onClick={() => changeMonth(month-1)}
             >
                 <ChevronLeft
@@ -35,7 +35,7 @@ export default function Pagination({setDate, calendarInfo}) {
                 </div>
             </button>
             <button
-            className="hover:text-blue-600 flex items-center"
+            className="transition ease-in-out duration-500 flex items-center hover:text-blue-500 hover:translate-x-2 "
             onClick={() => changeMonth(month+1)}
             >
                 <div>

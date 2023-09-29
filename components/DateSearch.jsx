@@ -34,7 +34,7 @@ export default function DateSearch({setDate}) {
         <div className="flex flex-col justify-center items-end">
             <div className="flex gap-3 items-center">
                 <input
-                className="bg-gray-200 text-black w-[125px] text-center p-1 rounded-lg"
+                className="text-black w-[125px] text-center p-1 rounded-lg"
                 placeholder="MM/DD/YYYY"
                 value={searchInput}
                 onChange={handleSearchInput}

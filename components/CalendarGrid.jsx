@@ -41,7 +41,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
                     onClick={() => changeMonth(month-1, day)}
                     >
                         <button
-                        className="border border-gray-500 rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
+                        className=" transition ease-in-out duration-500 border border-gray-500 rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black hover:scale-125"
                         >
                             {day}
                         </button>
@@ -54,7 +54,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
                     >
                         <button
                         className={
-                            `border rounded-full w-[40px] h-[40px] text-white hover:bg-slate-200 hover:text-black
+                            `transition ease-in-out duration-500 border rounded-full w-[40px] h-[40px] text-white hover:bg-slate-200 hover:text-black hover:scale-125
                             ${
                                 day === selected
                                 ? 'bg-blue-600'
@@ -75,7 +75,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
                     key={day}
                     >
                         <button
-                        className="border border-gray-500 rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
+                        className="transition ease-in-out duration-500 border border-gray-500 rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black hover:scale-125"
                         onClick={() => changeMonth(month+1, day)}
                         >
                             {day}
