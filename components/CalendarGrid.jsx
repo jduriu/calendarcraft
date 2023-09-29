@@ -1,6 +1,6 @@
 export default function CalendarGrid({calendarInfo, setSelected, selected, setDate}) {
 
-    const dayNames = calendarInfo.daysOfWeek
+    const dayAbbreviations = calendarInfo.daysOfWeek
     const year = calendarInfo.year
     const month = calendarInfo.month
     const prevMonthDays = calendarInfo.prevMonthDays
@@ -24,61 +24,61 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
     return (
         <div className="p-10 h-full">
             <div className="flex flex-wrap justify-between mb-6">
-                {dayNames.map((d) => (
+                {dayAbbreviations.map((abbreviation) => (
                     <div
                     className="flex justify-center w-[14.2%] text-2xl"
-                    key={d}
+                    key={abbreviation}
                     >
-                        {d}
+                        {abbreviation}
                     </div>
                 ))}
             </div>
             <div className="flex flex-wrap justify-between">
-                {prevMonthDays.map((da) => (
+                {prevMonthDays.map((day) => (
                     <div
                     className="flex justify-center w-[14.2%] py-5 text-x"
-                    key={da}
-                    onClick={() => changeMonth(month-1, da)}
+                    key={day}
+                    onClick={() => changeMonth(month-1, day)}
                     >
                         <button
                         className="border rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
                         >
-                            {da}
+                            {day}
                         </button>
                     </div>
                 ))}
-                {curMonthDays.map((da) => (
+                {curMonthDays.map((day) => (
                     <div
                     className="flex justify-center w-[14.2%] py-5 text-x"
-                    key={da}
+                    key={day}
                     >
                         <button
                         className={
                             `border rounded-full w-[40px] h-[40px] text-white hover:bg-slate-200 hover:text-black
                             ${
-                                da === selected
-                                ? 'bg-blue-400'
+                                day === selected
+                                ? 'bg-blue-600'
                                 : ''
                             }
                             `
                         }
-                        onClick={() => setSelected(da)}
+                        onClick={() => setSelected(day)}
                         >
-                            {da}
+                            {day}
                         </button>
 
                     </div>
                 ))}
-                {nextMonthDays.map((da) => (
+                {nextMonthDays.map((day) => (
                     <div
                     className="flex justify-center w-[14.2%] py-5 text-x"
-                    key={da}
+                    key={day}
                     >
                         <button
                         className="border rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
-                        onClick={() => changeMonth(month+1, da)}
+                        onClick={() => changeMonth(month+1, day)}
                         >
-                            {da}
+                            {day}
                         </button>
                     </div>
                 ))}

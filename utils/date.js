@@ -1,32 +1,32 @@
 const getPrevMonthDays = (startDay, month, year) => {
     const prevMonthTotal = new Date(year, month, 0).getDate()
     const start = prevMonthTotal - startDay + 1
-    const prevDays = []
+    const prevMonthDays = []
     if (start !== 6) {
-        for (let i = start; i < prevMonthTotal + 1; i++) {
-            prevDays.push(i)
+        for (let i = start; i <= prevMonthTotal; i++) {
+            prevMonthDays.push(i)
         }
     }
-    return prevDays
+    return prevMonthDays
 }
 
 const getMonthDays = (totalDays) => {
-    const curDays = []
+    const curMonthDays = []
     for (let i=1; i <= totalDays; i++) {
-        curDays.push(i)
+        curMonthDays.push(i)
     }
-    return curDays
+    return curMonthDays
 }
 
 const getNextMonthDays = (month, year) => {
-    const nextDays = []
+    const nextMonthDays = []
     const startDay = new Date(year, month+1, 1).getDay()
     if (startDay > 0) {
         for (let i=1; i <= 7-startDay; i++) {
-            nextDays.push(i)
+            nextMonthDays.push(i)
         }
     }
-    return nextDays
+    return nextMonthDays
 }
 
 
