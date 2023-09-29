@@ -83,6 +83,8 @@ Jon Uriu - [Linkedin](https://www.linkedin.com/in/jonathan-uriu/) - [Gitlab](htt
 ## Acknowledgments
 
 * [Img Shields](https://shields.io)
+* [React Feather Icons](https://www.npmjs.com/package/react-feather)
+
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
