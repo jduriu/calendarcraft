@@ -34,6 +34,8 @@ A modern, minimalist calendar app. No frills, just dates.
 ## Getting Started
 
 ### Prerequisites
+* node.js 16.14 or later
+
 * npm
     ```sh
     npm install npm@latest
