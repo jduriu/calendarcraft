@@ -38,7 +38,6 @@ export default function Calendar() {
         <div className="px-8">
           <CalendarGrid
           calendarInfo={calendarInfo}
-          setSelected={setSelected}
           selected={selected}
           setDate={setDate}
           />

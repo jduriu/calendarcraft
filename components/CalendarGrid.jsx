@@ -1,4 +1,4 @@
-export default function CalendarGrid({calendarInfo, setSelected, selected, setDate}) {
+export default function CalendarGrid({calendarInfo, selected, setDate}) {
 
     const dayAbbreviations = calendarInfo.daysOfWeek
     const year = calendarInfo.year
@@ -8,7 +8,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
     const nextMonthDays = calendarInfo.nextMonthDays
 
 
-    const changeMonth = (month, day) => {
+    const changeDate = (month, day = 1) => {
         if (month > 11) {
             const newDate = new Date(year+1, 0, day)
             setDate(newDate)
@@ -38,7 +38,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
                     <div
                     className="flex justify-center w-[14.2%] py-5 text-x"
                     key={day}
-                    onClick={() => changeMonth(month-1, day)}
+                    onClick={() => changeDate(month-1, day)}
                     >
                         <button
                         className="border border-gray-500 rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
@@ -62,7 +62,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
                             }
                             `
                         }
-                        onClick={() => setSelected(day)}
+                        onClick={() => changeDate(month, day)}
                         >
                             {day}
                         </button>
@@ -76,7 +76,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
                     >
                         <button
                         className="border border-gray-500 rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
-                        onClick={() => changeMonth(month+1, day)}
+                        onClick={() => changeDate(month+1, day)}
                         >
                             {day}
                         </button>
