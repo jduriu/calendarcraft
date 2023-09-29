@@ -58,7 +58,11 @@ A modern, minimalist calendar app. No frills, just dates.
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
 ## Usage
-Select a date to see any relevant information associated.
+Click on a date bubble to change the selected date!
+
+Other ways to navigate:
+- The month and year will change depending on which date is selected. You can also cycle through the months via the arrows at the top of the date grid.
+- If you enter a date in the search bar and press the magnifying glass it will jump you to the calendar date.
 
 ## Roadmap
 

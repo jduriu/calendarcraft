@@ -23,9 +23,11 @@ export default function Calendar() {
       <div className="flex flex-col m-10">
         <div className="flex justify-between">
           <h1 className="text-3xl">{calendarInfo.monthName} {calendarInfo.year}</h1>
-          <div className="flex justify-center items-center gap-5 w-[30%]">
+          <div className="flex justify-center items-center gap-5">
           </div>
-          <DateSearch/>
+          <DateSearch
+          setDate={setDate}
+          />
         </div>
         <div className="py-8 px-8">
           <Pagination
