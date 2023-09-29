@@ -20,10 +20,14 @@ export default function Calendar() {
 
   return (
       <div className="flex flex-col m-10">
-        <div className="flex py-3 px-2 justify-between">
+        <div className="flex justify-between">
           <h1 className="text-3xl">{calendarInfo.monthName} {calendarInfo.year}</h1>
-          <div>
-            <Pagination/>
+          <div className="flex justify-center items-center w-[20%]">
+            <Pagination
+            setDate={setDate}
+            month={calendarInfo.month}
+            year={calendarInfo.year}
+            />
           </div>
         </div>
         <div className="py-3 px-2 h-full">

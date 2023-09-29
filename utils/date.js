@@ -2,8 +2,10 @@ const getPrevMonthDays = (startDay, month, year) => {
     const prevMonthTotal = new Date(year, month, 0).getDate()
     const start = prevMonthTotal - startDay + 1
     const prevDays = []
-    for (let i = start; i < prevMonthTotal + 1; i++) {
-        prevDays.push(i)
+    if (start !== 6) {
+        for (let i = start; i < prevMonthTotal + 1; i++) {
+            prevDays.push(i)
+        }
     }
     return prevDays
 }
@@ -19,15 +21,17 @@ const getMonthDays = (totalDays) => {
 const getNextMonthDays = (month, year) => {
     const nextDays = []
     const startDay = new Date(year, month+1, 1).getDay()
-    for (let i=1; i <= 7-startDay; i++) {
-        nextDays.push(i)
+    if (startDay > 0) {
+        for (let i=1; i <= 7-startDay; i++) {
+            nextDays.push(i)
+        }
     }
     return nextDays
 }
 
 
 const daysOfWeek = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"]
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 export const getCalendarInfo = (date) => {
     const month = date.getMonth()

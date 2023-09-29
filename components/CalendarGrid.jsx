@@ -26,7 +26,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
             <div className="flex flex-wrap justify-between mb-6">
                 {dayNames.map((d) => (
                     <div
-                    className="flex justify-center w-[14.2%] h-[20%] text-2xl"
+                    className="flex justify-center w-[14.2%] text-2xl"
                     key={d}
                     >
                         {d}
