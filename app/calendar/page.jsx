@@ -2,6 +2,7 @@
 
 import CalendarGrid from "@/components/CalendarGrid";
 import Pagination from "@/components/Pagination";
+import DateSearch from "@/components/DateSearch";
 import { getCalendarInfo } from "@/utils/date";
 import { useState, useEffect } from "react";
 
@@ -22,15 +23,17 @@ export default function Calendar() {
       <div className="flex flex-col m-10">
         <div className="flex justify-between">
           <h1 className="text-3xl">{calendarInfo.monthName} {calendarInfo.year}</h1>
-          <div className="flex justify-center items-center w-[20%]">
-            <Pagination
-            setDate={setDate}
-            month={calendarInfo.month}
-            year={calendarInfo.year}
-            />
+          <div className="flex justify-center items-center gap-5 w-[30%]">
           </div>
+          <DateSearch/>
         </div>
-        <div className="py-3 px-2 h-full">
+        <div className="py-8 px-8">
+          <Pagination
+          setDate={setDate}
+          calendarInfo={calendarInfo}
+          />
+        </div>
+        <div className="px-8">
           <CalendarGrid
           calendarInfo={calendarInfo}
           setSelected={setSelected}

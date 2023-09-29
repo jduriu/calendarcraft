@@ -22,7 +22,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
     }
 
     return (
-        <div className="p-10 h-full">
+        <div className="h-full">
             <div className="flex flex-wrap justify-between mb-6">
                 {dayAbbreviations.map((abbreviation) => (
                     <div
@@ -41,7 +41,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
                     onClick={() => changeMonth(month-1, day)}
                     >
                         <button
-                        className="border rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
+                        className="border border-gray-500 rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
                         >
                             {day}
                         </button>
@@ -75,7 +75,7 @@ export default function CalendarGrid({calendarInfo, setSelected, selected, setDa
                     key={day}
                     >
                         <button
-                        className="border rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
+                        className="border border-gray-500 rounded-full w-[40px] h-[40px] text-gray-500 hover:bg-slate-200 hover:text-black"
                         onClick={() => changeMonth(month+1, day)}
                         >
                             {day}
