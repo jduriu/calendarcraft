@@ -40,11 +40,11 @@ export default function Joke() {
     }, [])
 
     return (
-        <div className="border border-gray-600 py-5 flex justify-center items-center rounded-full flex-wrap">
+        <div className="border border-green-400 w-fit flex justify-center items-center rounded-full ">
         {loading ?
-            <div>Happy April Fools Day! Here is a joke...</div>
+            <div className="p-6 text-center text-">Happy April Fools Day! Here is a joke...</div>
             :
-            <div>{joke}</div>
+            <div className="p-6 text-center">{joke}</div>
         }
         </div>
     )

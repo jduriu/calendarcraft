@@ -43,11 +43,12 @@ export default function Calendar() {
           setDate={setDate}
           />
         </div>
+        <div></div>
         {calendarInfo.april1st
           ?
-            <div>
-              <Joke/>
-            </div>
+          <div className="flex justify-center pt-5">
+            <Joke/>
+          </div>
           :
             null
         }

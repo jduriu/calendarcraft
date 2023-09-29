@@ -64,6 +64,8 @@ Other ways to navigate:
 - The month and year will change depending on which date is selected. You can also cycle through the months via the arrows at the top of the date grid.
 - If you enter a date in the search bar and press the magnifying glass it will jump you to the calendar date.
 
+There might even be a hidden feature if you land on the right date!
+
 ## Roadmap
 
 See the [open issues](https://github.com/jduriu/clubsport-calendar/issues) for a full list of proposed features (and known issues).
