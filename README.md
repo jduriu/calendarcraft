@@ -43,9 +43,12 @@ A modern, minimalist calendar app. No frills, just dates.
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/jduriu/clubsport-calendar
+    git clone https://github.com/jduriu/calendarcraft
     ```
 2. Navigate to the root folder of the cloned application
+  ```sh
+  cd calendarcraft
+  ```
 3. Install NPM packages
     ```sh
     npm install
@@ -54,6 +57,8 @@ A modern, minimalist calendar app. No frills, just dates.
     ```
     npm run dev
     ```
+5. Open a browser of your choice and navigate to
+  http://localhost:3000/
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
