@@ -43,6 +43,7 @@ export const getCalendarInfo = (date) => {
     const prevMonthDays = getPrevMonthDays(startDay, month, year)
     const curMonthDays = getMonthDays(totalDays)
     const nextMonthDays = getNextMonthDays(month, year)
+    const april1st = month === 3 && date.getDate() === 1
 
     const calendarInfo = {
         year: year,
@@ -55,7 +56,8 @@ export const getCalendarInfo = (date) => {
         monthNames: monthNames,
         prevMonthDays: prevMonthDays,
         curMonthDays: curMonthDays,
-        nextMonthDays: nextMonthDays
+        nextMonthDays: nextMonthDays,
+        april1st: april1st
     }
 
     return calendarInfo

@@ -5,6 +5,7 @@ import Pagination from "@/components/Pagination";
 import DateSearch from "@/components/DateSearch";
 import { getCalendarInfo } from "@/utils/date";
 import { useState, useEffect } from "react";
+import Joke from "@/components/Joke";
 
 
 export default function Calendar() {
@@ -17,7 +18,6 @@ export default function Calendar() {
     setCalendarInfo(getCalendarInfo(date))
     setSelected(date.getDate())
   }, [date])
-
 
   return (
       <div className="flex flex-col m-10">
@@ -38,11 +38,19 @@ export default function Calendar() {
         <div className="px-8">
           <CalendarGrid
           calendarInfo={calendarInfo}
-          setSelected={setSelected}
           selected={selected}
           setDate={setDate}
           />
         </div>
+        <div></div>
+        {calendarInfo.april1st
+          ?
+          <div className="flex justify-center pt-5">
+            <Joke/>
+          </div>
+          :
+            null
+        }
       </div>
 
   )
