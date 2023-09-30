@@ -75,6 +75,15 @@ There might even be a hidden feature if you land on the right date!
 
 ## Roadmap
 
+Design Decisions:
+- I chose to use arrays to house the date data. By starting with the current date, I was able to manipulate the javascript data object in order to get lists of the current months days as well as the previous and next months to ensure a full grid of date bubbles
+- I think I would have chosen a different data structure if this was coming from a backend api. My concern is that currently the dates are linked to their date number which is often repeated because of the multi-month dates in the grid. I think linking them to something like a uuid attribute would eliminate that condition.
+
+Additional Notes:
+- I think if I had additional time I would probably try and refactor my tailwind classes and set them to their own variables. I noticed after a while they were becoming repetitive across components.
+- I tried to abstract as much of the functions as possible and send them as props to child components to reduce copied code. I still think there is room for improvement. I may look into refactoring this in the future.
+
+
 See the [open issues](https://github.com/jduriu/clubsport-calendar/issues) for a full list of proposed features (and known issues).
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
