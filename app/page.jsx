@@ -7,7 +7,7 @@ export default function Landing() {
       <div>
         <Link href="/calendar">
           <button
-            className="border-2 border-gray-500 rounded-md py-2 px-1 bg-sky-400 text-black hover:bg-blue-400"
+            className=" transition ease-in-out duration-500 border-2 border-white rounded-md py-2 px-1 bg-black text-white hover:bg-blue-600 hover:scale-110"
           >
             Get Started
           </button>
